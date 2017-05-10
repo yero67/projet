@@ -1,0 +1,67 @@
+<div class="row">
+	<h1>{{connexion}}</h1>
+	<div class="box-register form-register">
+		<h1 class="">Connexion</h1>
+		<div class="form-register-container">
+
+			<div class="social-signin facebook-signin">
+				<a href="https://www.blablacar.fr/connect/facebook"
+					class="btn-social btn-facebook u-white js-oauth-connect"
+					data-provider="facebook"> <i
+					class="bbc-icon2-facebook-logo"
+					aria-hidden="true"></i> Connexion avec Facebook
+				</a>
+			</div>
+
+
+			<p class="smallprint">Nous ne publions rien sur votre mur sans
+				votre accord</p>
+
+
+			<form name="loginForm" method="POST" novalidate	ng-submit="inscription()">
+
+				<p class="separator">
+					<span>ou</span>
+				</p>
+
+				<div
+					ng-class="{ 'has-error' : loginForm.$submitted|| loginForm.email.$invalid && !loginForm.email.$pristine }">
+					<label class="register-email"> 
+					<input type="email" name='email' placeholder="Mon e-mail" 
+					ng-model="uemail" required>
+					</label>
+					<p
+						ng-show="loginForm.$submitted||loginForm.email.$invalid && !loginForm.email.$pristine"
+						class="help-block">Enter une adresse valide.</p>
+					<div ng-show="myForm.myPassword.$error.isDirty">	
+				</div>
+
+				<div ng-class="{ 'has-error' : loginForm.$submitted|| loginForm.upassword.$invalid && !loginForm.upassword.$pristine }">
+					<label class="register-password"> 
+					<input type="password" name="upassword" placeholder="Mon mot de passe"
+						ng-model="password" required>
+					</label>
+					
+					<p
+						ng-show="loginForm.$submitted||loginForm.upassword.$invalid && !loginForm.upassword.$pristine"
+						class="help-block">Enter a valid email.</p>
+				</div>
+				<label for="remember_me"> <input type="checkbox"
+					name="_remember_me"> Se souvenir de moi
+				</label>
+
+				<div class="form-action">
+					<button type="submit" name="_submit">Connexion</button>
+				</div>
+				<div class="align-right">
+					<a class="blue" href="/mot-de-passe-oublie"> Mot de passe
+						oublié </a>
+				</div>
+			</form>
+			<div class="signin">
+				<strong>Pas encore membre ?</strong> <a
+					class="blue" href="/inscription"> Inscrivez-vous gratuitement </a>
+			</div>
+		</div>
+	</div>
+</div>
