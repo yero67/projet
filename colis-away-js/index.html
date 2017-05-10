@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<base href="/">
+<meta charset="UTF-8">
+<title>Colis entre particuliers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<link type="text/css" rel="stylesheet" href="assets/normalize.css"/>
+<link type="text/css" rel="stylesheet" href="assets/bootstrap/css/bootstrap.css"/>
+<link type="text/css" rel="stylesheet" href="assets/bootstrap/css/bootstrap-theme.css"/>
+<link type="text/css" rel="stylesheet" href="assets/font-awesome/css/font-awesome.css"/>
+<link type="text/css" rel="stylesheet" href="views/css/style.css" media="screen"/>
+<link rel="icon" type="image/png" href="views/images/colis_away.png">
+
+
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular-route.js"></script>
+<script type="text/javascript" src="bower_components/angular/restangular.js"></script>
+<!-- <script type="text/javascript" src="bower_components/angular/router.es5.min.js"></script> -->
+<script type="text/javascript" src="bower_components/angular/underscore-min.js"></script>
+<script type="text/javascript" src="controllers/colisAwayRoot.js"></script>
+<script type="text/javascript" src="controllers/colisAwayCtrls.js"></script>
+<script type="text/javascript" src="controllers/restAngCfg.js"></script>
+<script type="text/javascript" src="controllers/colisAwayServices.js"></script>
+
+</head>
+<body>
+<header>
+	<div class="header">
+	<div class="span">
+	<span class="contact"><a ng-href="contact">Nous contacter</a></span>
+	<span class="conexion"><a ng-href="connexion">Connexion</a></span>
+	<span class="inscription"><a ng-href="inscription">Inscription</a></span>
+	</div>
+	<nav class="clearfix">
+		<ul class="clearfix">
+			<li><a ng-href="/">Accueil</a></li>
+			<li><a ng-href="membres">Membres</a></li>
+			<li><a ng-href="flash_promo">Bons plans</a></li>
+			<li><a ng-href="blogger">Blog</a></li>
+			<li><a ng-href="utilisation">Comment ça marche</a></li>				
+		</ul>
+		<a ng-href="#" id="pull"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
+	</nav>
+	</div>
+</header>
+
+<div class="container"> 
+<ng-view></ng-view>
+</div>
+
+<footer>
+    <section>
+        <div class="row"></div>
+ 
+    </section>
+    <section>
+        <div class="row"></div>
+	</section>
+</footer>
+</body>
+</html>
